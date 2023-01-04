@@ -1,0 +1,12 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "url",
+    srcs = [
+        "interface.go",
+        "service.go",
+    ],
+    importpath = "github.com/sudo-nick16/shorty/usecase/url",
+    visibility = ["//visibility:public"],
+    deps = ["//domain/entities"],
+)

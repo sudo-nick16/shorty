@@ -1,0 +1,9 @@
+filegroup(
+    name = "static_files",
+    srcs = [
+        "index.html",
+        "script.js",
+        "//api/public/assets:images",
+    ],
+    visibility = ["//visibility:public"],
+)

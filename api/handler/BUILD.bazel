@@ -1,0 +1,15 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "handler",
+    srcs = ["url.go"],
+    importpath = "github.com/sudo-nick16/shorty/api/handler",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//api/config",
+        "//domain/entities",
+        "//usecase/id_gen",
+        "//usecase/url",
+        "@com_github_gin_gonic_gin//:gin",
+    ],
+)

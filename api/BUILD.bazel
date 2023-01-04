@@ -1,0 +1,37 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+load("@io_bazel_rules_docker//go:image.bzl", "go_image")
+
+go_library(
+    name = "api",
+    srcs = ["main.go"],
+    data = [
+        "//api/public:static_files",
+    ],
+    importpath = "github.com/sudo-nick16/shorty/api",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//api/config",
+        "//api/handler",
+        "//infrastructure/repository",
+        "//usecase/id_gen",
+        "//usecase/url",
+        "@com_github_gin_gonic_gin//:gin",
+        "@com_github_teris_io_shortid//:shortid",
+        "@org_mongodb_go_mongo_driver//mongo",
+        "@org_mongodb_go_mongo_driver//mongo/options",
+    ],
+)
+
+go_binary(
+    name = "shorty",
+    embed = [":api"],
+    visibility = ["//visibility:public"],
+)
+
+go_image(
+    name = "shorty_image",
+    embed = [":api"],
+    goarch = "amd64",
+    goos = "linux",
+    importpath = "github.com/sudo-nick16/shorty/api",
+)

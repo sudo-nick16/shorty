@@ -1,0 +1,15 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "repository",
+    srcs = ["url_mongo.go"],
+    importpath = "github.com/sudo-nick16/shorty/infrastructure/repository",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//domain/entities",
+        "//usecase/url",
+        "@org_mongodb_go_mongo_driver//bson",
+        "@org_mongodb_go_mongo_driver//bson/primitive",
+        "@org_mongodb_go_mongo_driver//mongo",
+    ],
+)

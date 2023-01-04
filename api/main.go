@@ -53,7 +53,7 @@ func main(){
     handler.MakeURLHandler(router, userService, shorIdService)
 
     server := &http.Server{
-        Addr: config.E.PORT,
+        Addr: ":"+config.E.PORT,
         Handler: router,
         ReadTimeout: 10 * time.Second,
         WriteTimeout: 10 * time.Second,

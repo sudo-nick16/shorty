@@ -12,5 +12,5 @@ FOO=BAR BIZ=BAZ bazel run //api:shorty
 To build a docker image using bazel:
 
 ```
-bazel build //api:shorty_image -- --norun
+bazel build //api:shorty_image
 ```

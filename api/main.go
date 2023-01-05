@@ -13,7 +13,7 @@ import (
 	"github.com/sudo-nick16/shorty/api/config"
 	"github.com/sudo-nick16/shorty/api/handler"
 	"github.com/sudo-nick16/shorty/infrastructure/repository"
-	"github.com/sudo-nick16/shorty/usecase/url"
+    "github.com/sudo-nick16/shorty/usecase/url"
 	"github.com/sudo-nick16/shorty/usecase/id_gen"
 	"github.com/teris-io/shortid"
 	"go.mongodb.org/mongo-driver/mongo"

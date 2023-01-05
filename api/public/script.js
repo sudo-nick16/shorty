@@ -4,7 +4,7 @@ const shorten = document.querySelector("#shorten");
 const shWrap = document.querySelector("#shorty-wrapper");
 const shorty = document.querySelector("#shorty");
 const copy = document.querySelector("#copy");
-const API = "http://localhost:42069/api";
+const API = "https://shorty-ktsj.onrender.com/api";
 
 const makeItShort = async (url) => {
     shWrap.style.display = "none";

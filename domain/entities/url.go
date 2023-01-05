@@ -4,7 +4,7 @@ import "errors"
 
 type URL struct {
     Id string `json:"_id" bson:"_id,omitempty"`
-    ShortURL string `json:"shortURL,omitempty" bson:"shortURL,omitempty,unique"`
+    ShortURL string `json:"shortURL,omitempty" bson:"shortURL,omitempty"`
     RedirectTo string `json:"redirectTo,omitempty" bson:"redirectTo,omitempty"`
 }
 

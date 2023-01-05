@@ -13,15 +13,15 @@
 </head>
 
 <body class="bg-black flex flex-col items-center justify-center h-screen font-inter">
-    <div class="shadow-lg rounded rounded-sm flex flex-col items-center justify-center">
-        <h1 class="text-[#8000FF] text-[100px] font-black leading-none">
+    <div class="shadow-lg rounded rounded-sm flex flex-col items-center justify-center w-[21rem] sm:w-[27rem] max-w-screen">
+        <h1 class="text-[#8000FF] text-[70px] sm:text-[100px] font-black leading-none">
             Shorty
         </h1>
-        <div class="flex flex-row items-center justify-center mt-8">
+        <div class="flex flex-row items-center justify-center mt-8 w-full px-4">
             <div id="url" 
-                class="flex flex-row items-center relative justify-center rounded rounded-lg w-96 bg-[#1F0935] shadow-lg">
+                class="flex flex-row items-center relative justify-center rounded rounded-lg w-full bg-[#1F0935] shadow-lg">
                 <input id="url-input" type="text" name="url" placeholder="Paste your url here.."
-                    class="text-[#F2E5FF] opacity-90 bg-transparent text-lg py-2 px-4 w-full outline-none">
+                    class="text-[#F2E5FF] opacity-90 bg-transparent text-lg py-2 px-4 w-full outline-none overflow-hidden">
                 <button id="paste" class="rounded mr-2 opacity-70 hover:opacity-100">
                     <img src="assets/paste.png" alt="copy" class="w-4 h-4 m-1">
                 </button>
@@ -30,13 +30,15 @@
                 <img src="assets/reduce.png" alt="shorten" class="w-8 h-8 rounded-sm">
             </button>
         </div>
-        <div id="shorty-wrapper" style="display: none;" class="shadow-lg flex flex-row items-center justify-center w-full mt-4 rounded rounded-lg bg-[#8000FF] bg-opacity-50">
-            <a id="shorty"
-                class="text-white font-medium w-full py-2 cursor-pointer px-4 text-lg">
-            </a>
-            <button id="copy" class="rounded mr-2 opacity-70 hover:opacity-100">
-                <img src="assets/copy.png" alt="copy" class="w-5 h-5 m-1">
-            </button>
+        <div class="px-4 w-full mt-4">
+            <div id="shorty-wrapper" style="display: none;" class="shadow-lg flex flex-row items-center justify-center w-full rounded rounded-lg bg-[#8000FF] bg-opacity-50">
+                <a id="shorty"
+                   class="text-white font-medium w-full overflow-hidden truncate py-2 cursor-pointer px-4 text-lg">
+                </a>
+                <button id="copy" class="rounded mr-2 opacity-70 hover:opacity-100">
+                    <img src="assets/copy.png" alt="copy" class="w-5 h-5 m-1">
+                </button>
+            </div>
         </div>
     </div>
 </body>
